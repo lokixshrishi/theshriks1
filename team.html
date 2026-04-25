@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Onboarding &amp; Revenue Share Agreement — THE SHRIKS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080808; --surface: #0F0F0F; --border: #1E1E1E; --border-light: #2A2A2A;
+      --accent: #C8A96E; --accent-dim: rgba(200,169,110,0.10); --accent-dim2: rgba(200,169,110,0.05);
+      --text: #F0EDE6; --text-secondary: #A0A0A0; --text-muted: #505050;
+    }
+    html, body { background: var(--bg); color: var(--text); font-family: 'Lora', Georgia, serif; }
+    .page { max-width: 860px; margin: 0 auto; padding: 80px 60px 120px; }
+    .top-rule { width: 100%; height: 3px; background: var(--accent); margin-bottom: 48px; }
+    .doc-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 1px solid var(--border-light); }
+    .brand-block .Venture-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .brand-block .Venture-sub { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--text-muted); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 6px; }
+    .doc-meta { text-align: right; }
+    .doc-meta .doc-id { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; }
+    .doc-meta .doc-date { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 5px; letter-spacing: 0.1em; }
+    .doc-meta .doc-status { display: inline-block; margin-top: 10px; padding: 3px 10px; border: 1px solid var(--accent); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; }
+    .confidential-bar { background: var(--accent-dim); border: 1px solid rgba(200,169,110,0.3); padding: 10px 20px; margin-bottom: 40px; display: flex; align-items: center; gap: 12px; }
+    .confidential-bar span { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    .conf-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .doc-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    h1.doc-title { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 900; line-height: 1.15; letter-spacing: -0.01em; }
+    .doc-subtitle { font-family: 'Lora', serif; font-size: 15px; color: var(--text-secondary); margin-top: 16px; line-height: 1.75; max-width: 600px; font-style: italic; }
+    .title-block { margin-bottom: 56px; }
+    .section { margin-bottom: 52px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    h2.section-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    p.body-text { font-size: 15px; line-height: 1.85; color: var(--text-secondary); margin-bottom: 14px; }
+    p.body-text strong { color: var(--text); font-weight: 600; }
+    .highlight-box { background: var(--accent-dim2); border-left: 3px solid var(--accent); padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { font-size: 14.5px; line-height: 1.8; color: var(--text-secondary); font-style: italic; }
+    .highlight-box p strong { color: var(--accent); font-style: normal; }
+    table.commission-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-family: 'DM Mono', monospace; }
+    .commission-table thead tr { border-bottom: 2px solid var(--accent); }
+    .commission-table thead th { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); padding: 10px 16px; text-align: left; font-weight: 500; }
+    .commission-table tbody tr { border-bottom: 1px solid var(--border); }
+    .commission-table tbody td { padding: 14px 16px; font-size: 13px; color: var(--text-secondary); vertical-align: top; line-height: 1.5; }
+    .commission-table tbody td:first-child { color: var(--text); font-weight: 500; }
+    .commission-table tbody td.pct { color: var(--accent); font-weight: 500; white-space: nowrap; }
+    .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .split-card { background: var(--surface); border: 1px solid var(--border-light); padding: 22px 24px; }
+    .split-card .role-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+    .split-card .role-name { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .split-card .role-pct { font-family: 'DM Mono', monospace; font-size: 28px; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .split-card .role-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.6; font-style: italic; }
+    .example-box { background: var(--surface); border: 1px solid var(--border-light); margin: 28px 0; }
+    .example-box .ex-header { background: var(--accent-dim); padding: 12px 24px; border-bottom: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; }
+    .example-box .ex-header span { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    .example-box .ex-body { padding: 24px; }
+    .ex-project-value { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; margin-bottom: 20px; }
+    .ex-project-value strong { color: var(--text); font-size: 18px; }
+    .ex-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .ex-row:last-of-type { border-bottom: none; }
+    .ex-row .ex-role { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text-secondary); }
+    .ex-row .ex-role span { font-size: 9px; color: var(--text-muted); letter-spacing: 0.1em; display: block; margin-top: 3px; }
+    .ex-row .ex-amounts { text-align: right; }
+    .ex-inr { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--text); font-weight: 500; }
+    .ex-pct { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--accent); margin-top: 2px; }
+    .ex-total-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0 0; margin-top: 4px; border-top: 2px solid var(--accent); }
+    .ex-total-row .ex-role { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+    .ex-total-row .ex-inr { color: var(--accent); font-size: 18px; }
+    .clause-list { list-style: none; margin: 16px 0; }
+    .clause-list li { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 14.5px; line-height: 1.75; color: var(--text-secondary); }
+    .clause-list li:last-child { border-bottom: none; }
+    .clause-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--accent); padding-top: 4px; min-width: 30px; letter-spacing: 0.1em; }
+    .clause-list li strong { color: var(--text); }
+    .divider { border: none; border-top: 1px solid var(--border-light); margin: 48px 0; }
+    .signature-section { margin-top: 64px; padding-top: 40px; border-top: 2px solid var(--border-light); }
+    .sig-heading { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 40px; }
+    .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .sig-line { border-bottom: 1px solid var(--border-light); height: 100px; margin-bottom: 14px; position: relative; }
+    .sig-line::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 2px; background: var(--accent); }
+    .sig-name { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .sig-role { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+    .sig-Venture { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: var(--text-muted); }
+    .doc-footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .footer-studio { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+    .footer-note { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.08em; }
+    .bottom-rule { width: 100%; height: 3px; background: var(--accent); margin-top: 48px; }
+    @media (max-width: 680px) {
+      .page { padding: 36px 24px 80px; }
+      h1.doc-title { font-size: 28px; }
+      .split-grid, .sig-grid { grid-template-columns: 1fr; }
+      .doc-header { flex-direction: column; gap: 20px; }
+      .doc-meta { text-align: left; }
+      .ex-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+    /* Edit Mode Styles */
+    .edit-toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      padding: 12px 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      z-index: 1000;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+    .edit-toggle-btn:hover {
+      background: var(--text);
+      transform: translateY(-2px);
+    }
+    .edit-toggle-btn:disabled {
+      background: var(--text-muted);
+      cursor: not-allowed;
+      transform: none;
+    }
+    .edit-mode [contenteditable="true"] {
+      outline: 1px dashed var(--accent);
+      outline-offset: 4px;
+      transition: outline 0.2s ease;
+      cursor: text;
+    }
+    .edit-mode [contenteditable="true"]:hover {
+      outline: 2px dashed var(--accent);
+      background: var(--accent-dim2);
+    }
+    .edit-mode [contenteditable="true"]:focus {
+      outline: 2px solid var(--accent);
+      background: var(--accent-dim);
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <div class="brand-block">
+      <div class="studio-name">The Shriks</div>
+      <div class="studio-sub">Systems Architecture &amp; AI Automation Venture</div>
+    </div>
+
+  </div>
+
+  <div class="title-block">
+    <h1 class="doc-title">Brand, Growth &amp; Business Development Associate<br/>Onboarding, Revenue Share &amp; Contribution Terms</h1>
+    <p class="doc-subtitle">
+      This document defines the terms under which Sutariya Hemanshu contributes to The Shriks as a Brand, Growth & Business Development Associate. It outlines the four contribution lanes available, how each is compensated, what is received for the work, and the commitments The Shriks makes as a venture teammate.
+    </p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <div class="section-label">// Section 01 — Purpose &amp; Scope</div>
+    <h2 class="section-title">Purpose &amp; Scope</h2>
+    <p class="body-text">
+      This document is presented because <strong>Sutariya Hemanshu is being onboarded as a Brand, Growth & Business Development Associate at The Shriks</strong> — a systems architecture and AI automation venture. Sutariya Hemanshu is joining not as a client, not as a vendor, but as a venture teammate whose contribution drives commercial growth across multiple lanes.
+    </p>
+    <p class="body-text">
+      The role encompasses four distinct contribution categories: <strong>client acquisition and business development</strong>, <strong>venture growth and brand marketing</strong>, <strong>product launch and distribution support</strong>, and <strong>client delivery marketing</strong>. Each lane is compensated differently based on the nature of the work, the commercial result generated, and the attribution model applicable to that engagement.
+    </p>
+    <p class="body-text">
+      This document defines how contributions translate into financial compensation — whether through direct client commission, delivery compensation, milestone-based bonuses, or capped revenue-linked incentives tied to product launches or campaigns. It also clarifies what The Shriks commits, what is not guaranteed in the initial stage, and how the structure may evolve as the venture grows.
+    </p>
+    <div class="highlight-box">
+      <p>
+        <strong>Our Commitment:</strong> Sutariya Hemanshu is never required to invest personal money, pay any fee, or bear any cost to be part of this team or to do this work. Sutariya Hemanshu brings effort, network, and commercial contribution — The Shriks provides the venture infrastructure, delivery capability, technical systems, and may support approved costs for marketing, content, tools, or campaigns where feasible. When the venture earns from work contributed to, Sutariya Hemanshu earns. That is the foundation of this agreement.
+      </p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <div class="section-label">// Section 02 — Role &amp; Contribution Model</div>
+    <h2 class="section-title">Brand, Growth &amp; Business Development Associate — Four Contribution Lanes</h2>
+    <p class="body-text">
+      As a Brand, Growth & Business Development Associate, compensation is determined by which contribution lane is being worked in and the nature of the commercial result generated. The four lanes are independent but may overlap on certain engagements. Each has its own compensation structure.
+    </p>
+
+    <h2 class="section-title" style="margin-top: 40px; font-size: 18px;">A. Client Acquisition / Business Development</h2>
+    <p class="body-text">
+      This lane covers all work related to identifying, approaching, pitching, closing, and managing client relationships for paid engagements delivered by The Shriks. Your compensation in this lane is commission-based and tied directly to attributable client acquisition.
+    </p>
+    <table class="commission-table">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Definition</th>
+          <th>Commission %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cold Outreach — Lead Only</td>
+          <td>The associate identifies and contacts the prospect. The Shriks team handles pitch, close, and delivery.</td>
+          <td class="pct">5% – 7%</td>
+        </tr>
+        <tr>
+          <td>Cold Outreach — Full Close</td>
+          <td>The associate identifies, cold contacts, pitches, and closes the client independently or with minimal venture closing support.</td>
+          <td class="pct">15% – 17%</td>
+        </tr>
+        <tr>
+          <td>End-to-End Acquisition</td>
+          <td>The associate manages the acquisition process end-to-end — from identifying the opportunity and initiating contact through pitching and securing the client engagement. Ongoing communication may continue, but the commission band is based on end-to-end acquisition ownership, not simply relationship maintenance alone.</td>
+          <td class="pct">15% – 20%</td>
+        </tr>
+        <tr>
+          <td>Warm Referral</td>
+          <td>The associate introduces an existing contact or warm lead who then engages The Shriks. No full outbound sales process is involved.</td>
+          <td class="pct">5% – 8%</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="body-text">
+      <strong>Important:</strong> The exact percentage within the applicable range must be confirmed in writing by the founding team before any outreach begins. Commission applies only to work where client acquisition is reasonably attributable to the effort. If there is also contribution to delivery on the same engagement, both BD commission and delivery compensation may apply — see dual-role rules in Section 05.
+    </p>
+
+    <h2 class="section-title" style="margin-top: 40px; font-size: 18px;">B. Venture Growth / Brand Marketing</h2>
+    <p class="body-text">
+      This lane covers work that builds The Shriks' brand presence, visibility, and commercial positioning. This includes founder content support, social media management, reels and posts, website and documentation content, awareness campaigns, and venture positioning work.
+    </p>
+    <p class="body-text">
+      <strong>Compensation structure:</strong> This work is not tied to direct client revenue and therefore is not compensated through commission. Instead, it may be compensated through milestone-based bonuses, capped revenue-linked incentives where a commercial result is reasonably attributable, or — where venture cash flow permits — a fixed stipend or retainer component.
+    </p>
+    <p class="body-text">
+      <strong>What this is not:</strong> This is not equity. This is not company ownership. This is not permanent product share. This is contribution-based compensation tied to defined milestones or attributable commercial growth.
+    </p>
+    <p class="body-text">
+      <strong>Initial-stage reality:</strong> In the early phase of venture growth, no fixed stipend is guaranteed for this lane unless separately agreed in writing. Compensation may rely on milestone bonuses or discretionary incentives until venture cash flow supports a more structured model.
+    </p>
+
+    <h2 class="section-title" style="margin-top: 40px; font-size: 18px;">C. Product Launch / Product Distribution</h2>
+    <p class="body-text">
+      This lane covers work related to launching, distributing, and promoting venture products — including LokiAI and future product releases. This includes launch content, reels, posts, waitlist campaigns, distribution strategy, launch assets, and product visibility work.
+    </p>
+    <p class="body-text">
+      <strong>Compensation structure:</strong> Work in this lane may be compensated through a capped revenue-linked incentive tied to a defined launch window or campaign period, milestone-based bonuses for launch execution, or a hybrid model combining both.
+    </p>
+    <p class="body-text">
+      <strong>What "share" means here:</strong> "Share" refers only to an agreed share of revenue generated within a defined launch or commercial window. It does not create ownership, equity, product rights, or permanent entitlement to future product revenue. The incentive structure, cap, and attribution model must be confirmed in writing before the campaign or launch begins.
+    </p>
+    <p class="body-text">
+      <strong>Attribution requirement:</strong> Revenue-linked incentives apply only where the commercial result is reasonably attributable to your launch or distribution effort. Where attribution is unclear, milestone-based compensation may be used instead.
+    </p>
+
+    <h2 class="section-title" style="margin-top: 40px; font-size: 18px;">D. Client Delivery Marketing</h2>
+    <p class="body-text">
+      This lane covers digital marketing, content execution, growth campaigns, and launch support delivered as a paid service to a client. This is execution work delivered under The Shriks venture. Examples include digital marketing packages, social media management for clients, campaign execution, and growth strategy implementation.
+    </p>
+    <p class="body-text">
+      <strong>Compensation structure:</strong> If the digital marketing work is executed for a client engagement, separately agreed digital marketing execution compensation may be received for that specific scope. This is separate from BD commission. If the client was both acquired and the marketing work is being executed, both compensation categories may apply.
+    </p>
+    <p class="body-text">
+      <strong>Important:</strong> For standard technical projects (software, systems, web, AI, automation), The Shriks venture delivers the project. The primary compensation on such projects is commercial acquisition commission unless a specific execution role has been separately agreed. General project delivery share is not received simply for bringing in the client — delivery remains with The Shriks venture.
+    </p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <div class="section-label">// Section 03 — Revenue Model &amp; Allocation Framework</div>
+    <h2 class="section-title">How Project Revenue Is Allocated</h2>
+    <p class="body-text">
+      Revenue from client engagements is allocated across defined categories. The allocation model may vary depending on project type, team size, scope, delivery involvement, business development role, and venture operational needs. There is no universal fixed formula that applies to every engagement.
+    </p>
+    <p class="body-text">
+      <strong>Early-stage reference model:</strong> For small-team projects in the initial phase, a common allocation framework may resemble the following structure. This is not a permanent law — it is a reference point that may be adjusted based on the engagement.
+    </p>
+    <div class="split-grid">
+      <div class="split-card">
+        <div class="role-label">// BD / Sales</div>
+        <div class="role-name">Business Development</div>
+        <div class="role-pct">Variable</div>
+        <div class="role-desc">Commission tied to client acquisition. Percentage depends on role type (lead only, full close, relationship management). One-time, calculated on first invoice paid.</div>
+      </div>
+      <div class="split-card">
+        <div class="role-label">// Delivery</div>
+        <div class="role-name">Build &amp; Delivery Team</div>
+        <div class="role-pct">Variable</div>
+        <div class="role-desc">Engineers, designers, architects, and delivery contributors responsible for technical execution and client-facing work. Allocation depends on team size and scope.</div>
+      </div>
+      <div class="split-card">
+        <div class="role-label">// Venture</div>
+        <div class="role-name">Venture Overhead</div>
+        <div class="role-pct">Variable</div>
+        <div class="role-desc">Operations, tooling, infrastructure, administration, venture margin, and marketing fund allocation. May increase or decrease based on project complexity.</div>
+      </div>
+      <div class="split-card">
+        <div class="role-label">// Growth</div>
+        <div class="role-name">Marketing &amp; Growth Fund</div>
+        <div class="role-pct">Allocated from Venture %</div>
+        <div class="role-desc">A portion of venture overhead may be ring-fenced for marketing, brand growth, product launch support, and future client acquisition activities.</div>
+      </div>
+    </div>
+    <p class="body-text">
+      <strong>What this means in practice:</strong> Project revenue may be allocated across business development contribution, delivery pool, venture overhead, and — where relevant — product launch or growth incentive pools. Final allocation for each engagement must be agreed in advance and confirmed in writing where compensation is tied to that engagement.
+    </p>
+    <p class="body-text">
+      <strong>Important:</strong> Delivery allocation is not always 60%. Venture overhead is not always 20%. BD commission is not always 20%. These percentages may shift based on the nature of the engagement, the team involved, and the commercial structure of the project.
+    </p>
+  </div>
+
+  <!-- SECTION 5 — PAYMENT TERMS -->
+  <div class="section">
+    <div class="section-label">// Section 05 — Payment Terms &amp; Venture Commitments</div>
+    <h2 class="section-title">Payment Terms &amp; Venture Commitments</h2>
+    <ul class="clause-list">
+      <li>
+        <span class="clause-num">5.1</span>
+        <div><strong>Payment from cleared revenue only.</strong> Commission and revenue-linked incentives are payable exclusively from funds received and cleared from the client or commercial source. No payment obligation exists on the part of The Shriks until revenue has been received and cleared for the relevant invoice, milestone, or campaign period.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.2</span>
+        <div><strong>Zero personal investment required.</strong> No individual is required to contribute personal funds, pay any joining fee, subscribe to any plan, or bear any financial cost whatsoever in order to participate in any contribution lane at The Shriks. This is an unconditional commitment from the studio.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.3</span>
+        <div><strong>Studio may support approved costs.</strong> Where feasible and approved in advance by the founding team, The Shriks may support costs related to marketing, content production, software tools, campaign execution, posting support, editing, or launch assets. Approval is case-by-case and subject to studio cash flow availability.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.4</span>
+        <div><strong>One-time BD commission on first invoice.</strong> Business development commission applies to the first client payment received on the relevant project. It does not automatically apply to subsequent invoices, retainer renewals, or project extensions unless separately confirmed in writing by the founding team.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.5</span>
+        <div><strong>Payment within 7 working days.</strong> Commission and delivery compensation are disbursed within 7 working days of The Shriks receiving cleared client funds for the relevant invoice. Milestone bonuses and launch incentives are disbursed within 7 working days of milestone completion or campaign period close, subject to revenue receipt where applicable.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.6</span>
+        <div><strong>Retainers and ongoing contracts.</strong> For monthly retainer engagements, BD commission is calculated on Month 1 value only and paid once. Recurring commission does not apply unless separately negotiated and confirmed in writing prior to the engagement commencing.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.7</span>
+        <div><strong>Dual role — BD and delivery.</strong> If the same individual who brought in the client also contributes to technical or marketing delivery, both BD commission and proportionate share of the delivery allocation are received. Both are calculated independently and paid together.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.8</span>
+        <div><strong>Written confirmation required before work begins.</strong> The applicable commission percentage, delivery share, milestone bonus structure, or revenue-linked incentive model must be confirmed in writing — email, message, or signed acknowledgement — by a founding team member before any outreach, campaign, or delivery work begins. Verbal agreements are not binding under this policy.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.9</span>
+        <div><strong>Project cancellation or client non-payment.</strong> If a client cancels before paying, or a payment is not recoverable, no commission or revenue-linked incentive is owed for the unpaid amount. The Shriks holds no liability to pay compensation from studio funds in such circumstances. If partial payment is received, compensation is calculated on the amount actually received.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.10</span>
+        <div><strong>Initial-stage cash constraint.</strong> In the initial phase of studio growth, The Shriks may not be able to provide fixed monthly stipend or salary for this role. Compensation in this stage may rely on client commission, delivery compensation, milestone bonuses, and capped launch or product revenue-linked incentives. As studio cash flow grows, the compensation structure may evolve to include stipend, retainer, or monthly fixed components.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.11</span>
+        <div><strong>Attribution requirement for revenue-linked incentives.</strong> Revenue-linked incentives apply only where the commercial result is reasonably attributable to the effort. Attribution may be based on direct lead source, outreach trail, campaign ownership, tracked link or code, clearly approved launch or distribution responsibility, or founder/team written confirmation. Where attribution is unclear, disputed, or not reasonably provable, The Shriks may instead use milestone-based bonus or an agreed discretionary incentive.</div>
+      </li>
+      <li>
+        <span class="clause-num">5.12</span>
+        <div><strong>Policy amendments and team growth.</strong> This policy may be updated by the founding team with reasonable advance notice to active contributors. As more people join and the studio grows, terms may evolve, percentages may change, and project allocation models may be revised. Changes will be discussed in advance with the active team and communicated before applying to new work. Existing ongoing engagements will continue under the previously agreed terms unless all relevant parties agree otherwise in writing.</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SECTION 6 — SHARE DEFINITION -->
+  <div class="section">
+    <div class="section-label">// Section 06 — Definition of "Share"</div>
+    <h2 class="section-title">What "Share" Means In This Document</h2>
+    <p class="body-text">
+      <strong>"Share" in this document does not mean equity, ownership, partnership interest, company stake, or permanent product ownership.</strong>
+    </p>
+    <p class="body-text">
+      It refers only to a defined and agreed share of revenue generated from an attributable client engagement, campaign, launch window, product distribution effort, or commercial result, as specifically confirmed in writing before the work begins.
+    </p>
+    <p class="body-text">
+      Revenue-linked incentives tied to product launches or campaigns are capped, time-bound, and apply only within the defined commercial window. They do not create ongoing entitlement to future product revenue, equity in the product, or ownership rights of any kind.
+    </p>
+    <p class="body-text">
+      This section exists to remove ambiguity completely. If you are told you will receive "a share" of a launch or campaign, that means only a share of revenue generated within the agreed period and cap — nothing more.
+    </p>
+  </div>
+
+  <!-- SECTION 7 — ATTRIBUTION RULES -->
+  <div class="section">
+    <div class="section-label">// Section 07 — Attribution Rules</div>
+    <h2 class="section-title">How Attribution Is Determined</h2>
+    <p class="body-text">
+      Revenue-linked incentives — whether for client acquisition, product launches, or campaigns — apply only where the commercial result is reasonably attributable to the effort. Attribution is not automatic. It must be provable or agreed.
+    </p>
+    <p class="body-text">
+      <strong>Attribution may be based on:</strong>
+    </p>
+    <ul class="clause-list">
+      <li>
+        <span class="clause-num">7.1</span>
+        <div>Direct lead source — you initiated the contact, outreach, or referral that led to the engagement.</div>
+      </li>
+      <li>
+        <span class="clause-num">7.2</span>
+        <div>Outreach trail — documented evidence of your pitch, communication, or relationship management with the client.</div>
+      </li>
+      <li>
+        <span class="clause-num">7.3</span>
+        <div>Campaign ownership — you were assigned and executed a defined launch, distribution, or growth campaign.</div>
+      </li>
+      <li>
+        <span class="clause-num">7.4</span>
+        <div>Tracked link, code, or form — revenue can be traced to a specific campaign asset you managed.</div>
+      </li>
+      <li>
+        <span class="clause-num">7.5</span>
+        <div>Clearly approved launch or distribution responsibility — written responsibility was given for a product launch or distribution effort.</div>
+      </li>
+      <li>
+        <span class="clause-num">7.6</span>
+        <div>Founder or team written confirmation — the founding team confirms in writing that the result is attributable to the work.</div>
+      </li>
+    </ul>
+    <p class="body-text">
+      <strong>Where attribution is unclear, disputed, or not reasonably provable,</strong> The Shriks may instead use milestone-based bonus or an agreed discretionary incentive rather than revenue-linked compensation. This protects both the associate and the studio from disputes over unclear commercial results.
+    </p>
+  </div>
+
+  <!-- SECTION 8 — INITIAL STAGE STRUCTURE -->
+  <div class="section">
+    <div class="section-label">// Section 08 — Initial Stage Structure</div>
+    <h2 class="section-title">Early-Stage Reality &amp; Compensation Model</h2>
+    <p class="body-text">
+      The Shriks is in its initial growth phase. This means that in the early stage, the studio may not be able to provide fixed monthly stipend or salary for this role. This is not a permanent constraint — it is a reality of the current phase.
+    </p>
+    <p class="body-text">
+      <strong>In this initial stage, compensation may rely on:</strong>
+    </p>
+    <ul class="clause-list">
+      <li>
+        <span class="clause-num">8.1</span>
+        <div>Client commission — tied to attributable client acquisition work.</div>
+      </li>
+      <li>
+        <span class="clause-num">8.2</span>
+        <div>Delivery compensation — tied to your proportionate contribution to client delivery work.</div>
+      </li>
+      <li>
+        <span class="clause-num">8.3</span>
+        <div>Milestone bonuses — tied to completion of defined studio growth, brand marketing, or launch milestones.</div>
+      </li>
+      <li>
+        <span class="clause-num">8.4</span>
+        <div>Capped launch or product revenue-linked incentives — tied to attributable commercial results from product launches or campaigns.</div>
+      </li>
+    </ul>
+    <p class="body-text">
+      <strong>As studio cash flow grows, the compensation structure may evolve to include:</strong>
+    </p>
+    <ul class="clause-list">
+      <li>
+        <span class="clause-num">8.5</span>
+        <div>Fixed monthly stipend or retainer component.</div>
+      </li>
+      <li>
+        <span class="clause-num">8.6</span>
+        <div>Revised hybrid compensation combining fixed and variable components.</div>
+      </li>
+      <li>
+        <span class="clause-num">8.7</span>
+        <div>More structured milestone or performance-based bonus systems.</div>
+      </li>
+    </ul>
+    <p class="body-text">
+      This section exists to set realistic expectations. Joining in the initial stage means joining a studio that is building cash flow and commercial momentum. Compensation in this phase reflects that reality.
+    </p>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="section">
+    <div class="section-label">// Section 09 — Services Covered Under This Policy</div>
+    <h2 class="section-title">Services Covered Under This Policy</h2>
+    <p class="body-text">
+      This compensation policy applies to client engagements, product launches, and commercial work across all service lines offered by The Shriks. The four contribution lanes — client acquisition, studio growth, product launch, and client delivery marketing — may apply to any of the following services depending on the nature of the engagement.
+    </p>
+    <table class="commission-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Full-Stack Engineering</td><td>Web applications, platforms, and end-to-end product engineering</td></tr>
+        <tr><td>AI Infrastructure &amp; Development</td><td>LLM integration, AI agents, model infrastructure, AI-powered product systems</td></tr>
+        <tr><td>Automation Systems</td><td>Workflow automation, operational pipelines, and process automation via Kn8t</td></tr>
+        <tr><td>Backend Systems Engineering</td><td>APIs, microservices, backend architecture, and distributed systems</td></tr>
+        <tr><td>Internal Tools &amp; Platforms</td><td>Custom business tooling, internal dashboards, and admin systems</td></tr>
+        <tr><td>API &amp; Integration Engineering</td><td>Third-party integrations, API development, and connector infrastructure</td></tr>
+        <tr><td>Data Systems &amp; Pipelines</td><td>Data infrastructure, ETL pipelines, and analytics systems</td></tr>
+        <tr><td>Blockchain Systems</td><td>Smart contracts, Web3 infrastructure, and decentralised application development</td></tr>
+        <tr><td>Cybersecurity Engineering</td><td>Security audits, secure system design, and vulnerability assessment</td></tr>
+        <tr><td>Desktop Application Development</td><td>Cross-platform and native desktop applications</td></tr>
+        <tr><td>Digital Marketing &amp; Growth</td><td>Campaign execution, content strategy, social media management, and growth systems</td></tr>
+        <tr><td>Website Development &amp; Design</td><td>Website build, design, and digital presence development</td></tr>
+        <tr><td>Technical Architecture &amp; Consulting</td><td>Product architecture strategy, technical advisory, and system design consulting</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="signature-section">
+    <div class="sig-heading">// Authorised &amp; Issued By</div>
+    <div class="sig-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-name">Laukik Rajput</div>
+        <div class="sig-role">Founder</div>
+        <div class="sig-studio">The Shriks</div>
+      </div>
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-name">Shrusti Rajput</div>
+        <div class="sig-role">Co-Founder</div>
+        <div class="sig-studio">The Shriks</div>
+      </div>
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-name">Sutariya Hemanshu</div>
+        <div class="sig-role">Brand, Growth &amp; Business Development Associate</div>
+        <div class="sig-studio">The Shriks</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Determine API URL based on environment
+const API_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000/api' 
+  : 'https://team.theshriks.space/api';
+
+// Signature functionality with MongoDB integration
+function enableSignature(lineElement, signerName, signerRole) {
+  const canvas = document.createElement('canvas');
+  canvas.width = lineElement.offsetWidth;
+  canvas.height = 100;
+  canvas.style.position = 'absolute';
+  canvas.style.top = '0';
+  canvas.style.left = '0';
+  canvas.style.cursor = 'crosshair';
+  canvas.style.border = '1px dashed var(--accent)';
+  
+  const ctx = canvas.getContext('2d');
+  ctx.strokeStyle = '#C8A96E';
+  ctx.lineWidth = 2;
+  ctx.lineCap = 'round';
+  
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+  
+  canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    const rect = canvas.getBoundingClientRect();
+    lastX = e.clientX - rect.left;
+    lastY = e.clientY - rect.top;
+  });
+  
+  canvas.addEventListener('mousemove', (e) => {
+    if (!isDrawing) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    
+    lastX = x;
+    lastY = y;
+  });
+  
+  canvas.addEventListener('mouseup', () => {
+    isDrawing = false;
+  });
+  
+  canvas.addEventListener('mouseleave', () => {
+    isDrawing = false;
+  });
+  
+  canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    isDrawing = true;
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches[0];
+    lastX = touch.clientX - rect.left;
+    lastY = touch.clientY - rect.top;
+  });
+  
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    if (!isDrawing) return;
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches[0];
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    
+    lastX = x;
+    lastY = y;
+  });
+  
+  canvas.addEventListener('touchend', () => {
+    isDrawing = false;
+  });
+  
+  lineElement.style.position = 'relative';
+  lineElement.appendChild(canvas);
+  
+  const buttonContainer = document.createElement('div');
+  buttonContainer.style.cssText = `
+    position: absolute;
+    top: -35px;
+    right: 0;
+    display: flex;
+    gap: 8px;
+  `;
+  
+  const clearBtn = document.createElement('button');
+  clearBtn.textContent = 'Clear';
+  clearBtn.style.cssText = `
+    background: var(--text-muted);
+    color: var(--bg);
+    border: none;
+    padding: 4px 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+  `;
+  clearBtn.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  });
+  
+  const saveBtn = document.createElement('button');
+  saveBtn.textContent = 'Save Signature';
+  saveBtn.style.cssText = `
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    padding: 4px 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+  `;
+  saveBtn.addEventListener('click', async () => {
+    const signatureData = canvas.toDataURL('image/png');
+    await saveSignatureToDatabase(signerName, signerRole, signatureData, lineElement);
+  });
+  
+  buttonContainer.appendChild(clearBtn);
+  buttonContainer.appendChild(saveBtn);
+  lineElement.appendChild(buttonContainer);
+}
+
+async function saveSignatureToDatabase(signerName, signerRole, signatureData, lineElement) {
+  try {
+    const response = await fetch(`${API_URL}/signatures`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ signerName, signerRole, signatureData })
+    });
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      alert(`Signature saved successfully for ${signerName}!`);
+      lineElement.style.pointerEvents = 'none';
+      const buttons = lineElement.querySelectorAll('button');
+      buttons.forEach(btn => btn.style.display = 'none');
+      
+      // Check if all signatures are complete
+      if (result.allSigned && signerName === 'Sutariya Hemanshu') {
+        // Show welcome message for Hemanshu
+        setTimeout(() => {
+          showWelcomeMessage();
+        }, 1000);
+      } else {
+        loadSignatures();
+      }
+    } else {
+      alert(`Error: ${result.error}`);
+    }
+  } catch (error) {
+    alert(`Failed to save signature: ${error.message}`);
+  }
+}
+
+function showWelcomeMessage() {
+  document.querySelector('.page').innerHTML = `
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; text-align: center;">
+      <div style="max-width: 600px;">
+        <div style="width: 100px; height: 3px; background: var(--accent); margin: 0 auto 40px;"></div>
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; color: var(--text); margin-bottom: 24px; letter-spacing: -0.02em;">
+          Welcome to<br/>The Shriks
+        </h1>
+        <p style="font-family: 'Lora', serif; font-size: 18px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 40px;">
+          Your agreement has been successfully signed and submitted. You are now officially part of The Shriks team.
+        </p>
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);">
+          Systems Architecture & AI Automation Venture
+        </div>
+        <div style="width: 100px; height: 3px; background: var(--accent); margin: 40px auto 0;"></div>
+      </div>
+    </div>
+  `;
+}
+
+async function loadSignatures() {
+  try {
+    const response = await fetch(`${API_URL}/signatures`);
+    const result = await response.json();
+    
+    if (result.success) {
+      result.signatures.forEach(sig => {
+        const sigBlock = Array.from(document.querySelectorAll('.sig-name'))
+          .find(el => el.textContent === sig.signerName)
+          ?.closest('.sig-block');
+        
+        if (sigBlock) {
+          const sigLine = sigBlock.querySelector('.sig-line');
+          sigLine.innerHTML = '';
+          
+          const img = document.createElement('img');
+          img.src = sig.signatureData;
+          img.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          `;
+          sigLine.appendChild(img);
+          sigLine.style.pointerEvents = 'none';
+        }
+      });
+      
+      checkSubmitStatus();
+    }
+  } catch (error) {
+    console.error('Failed to load signatures:', error);
+  }
+}
+
+function checkSubmitStatus() {
+  const signatureLines = document.querySelectorAll('.sig-line');
+  const signedCount = Array.from(signatureLines).filter(line => 
+    line.querySelector('img') || line.querySelector('canvas')
+  ).length;
+  
+  const submitBtn = document.querySelector('.edit-toggle-btn');
+  if (signedCount >= 2) {
+    submitBtn.disabled = false;
+  }
+}
+
+async function saveAndSubmit() {
+  try {
+    const response = await fetch(`${API_URL}/submit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      const btn = document.querySelector('.edit-toggle-btn');
+      btn.disabled = true;
+      btn.textContent = 'Submitted ✓';
+      
+      const signatureLines = document.querySelectorAll('.sig-line');
+      signatureLines.forEach(line => {
+        line.style.pointerEvents = 'none';
+      });
+      
+      const timestamp = new Date().toLocaleString();
+      const timestampDiv = document.createElement('div');
+      timestampDiv.style.cssText = `
+        text-align: center;
+        margin-top: 40px;
+        font-family: 'DM Mono', monospace;
+        font-size: 10px;
+        color: var(--text-muted);
+        letter-spacing: 0.1em;
+      `;
+      timestampDiv.textContent = `SIGNED AND SUBMITTED ON ${timestamp.toUpperCase()}`;
+      document.querySelector('.signature-section').appendChild(timestampDiv);
+      
+      alert(`Document submitted successfully!\n\nSigned by: ${result.signatures} parties\nDate: ${timestamp}\n\nSignatures are permanently stored in MongoDB.`);
+    } else {
+      alert(`Error: ${result.error}`);
+    }
+  } catch (error) {
+    alert(`Failed to submit: ${error.message}`);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const signatureBlocks = document.querySelectorAll('.sig-block');
+  
+  signatureBlocks.forEach(block => {
+    const sigLine = block.querySelector('.sig-line');
+    const sigName = block.querySelector('.sig-name').textContent;
+    const sigRole = block.querySelector('.sig-role').textContent;
+    
+    sigLine.style.cursor = 'pointer';
+    sigLine.title = 'Click to sign';
+    
+    sigLine.addEventListener('click', function() {
+      if (!this.querySelector('canvas') && !this.querySelector('img')) {
+        enableSignature(this, sigName, sigRole);
+      }
+    });
+  });
+  
+  loadSignatures();
+});
+</script>
+</body>
+</html>
